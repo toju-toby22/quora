@@ -1,0 +1,52 @@
+.ansbox {
+    margin-top: 20px;
+    /* margin-left: 100px; */
+}
+
+.answerbox {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid lightgray;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    /* height: 70px; */
+    padding: 0px 10px 0px 10px;
+    width: 600px;
+}
+.starbox{
+    background-color: rgb(185,43,39);
+    height: fit-content;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.qusbox{
+    display: flex;
+    align-items: center;
+    /* padding: 0px 10px 0px 10px; */
+}
+.qusbox p{
+    padding-left: 10px;
+    font-size: small;
+}
+.boxfeed{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 0px 10px 0px 10px; */
+
+}
+
+.boxtext1{
+    font-weight: bold;
+}
+.boxtext1 span{
+    font-weight: lighter;
+    font-size: small;
+    color: gray;
+}

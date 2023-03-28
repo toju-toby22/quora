@@ -1,0 +1,38 @@
+.quora {
+  width: "100%";
+  min-width: fit-content;
+}
+
+.quora__contents {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  background-color: rgba(0, 0, 0, 0.05);
+  min-width: fit-content;
+  width: 100%;
+}
+
+.quora__content {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: flex-start; */
+  margin: 0px 0px 0px 100px;
+  /* padding: 30px; */
+  /* margin: auto; */
+  width: 100%;
+  max-width: 1200px;
+}
+
+.react-responsive-modal-modal {
+  width: 90vw;
+  height: 90vh;
+}
+
+.quill {
+  height: 50vh;
+}
+
+.react-responsive-modal-overlay {
+  background: rgb(0 0 0 / 75%);
+}

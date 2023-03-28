@@ -1,0 +1,274 @@
+body.active-modl{
+  overflow-y: hidden;
+}
+
+.anss{
+  padding-left: 10px;
+}
+
+.modalbackground {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 3;
+    background-color: rgba(49, 49, 49, 0.8);
+  }
+  .overlay{
+    background:rgba(49, 49, 49, 0.8) ;
+  }
+  
+  .modalContainer {
+    width: 700px;
+    height: 520px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.877) 0px 5px 25px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    padding: -25px;
+    z-index: 1000;
+    position: fixed;
+    /* margin-left: 350px;
+    margin-top: 50px; */
+    top: 10%;
+    left: 30%;
+  }
+  
+  .modalcontainer .title {
+    display: inline-block;
+    text-align: center;
+    /* margin-top: 10px; */
+  }
+  
+  .titleCloseBtn {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .titleCloseBtn button {
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  
+  .modalContainer .body {
+    /* flex: 50%; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    font-size: 1.7rem;
+    /* text-align: center; */
+  }
+  
+  .closebtn{
+    display: flex;
+    /* justify-content: center; */
+    justify-self: start;
+   align-items: center;
+   padding: 4px;
+    margin-top: 10px;
+  }
+  .btn1{
+    display: flex;
+    align-items: center;
+  }
+  .btn-spn{
+    margin-left:10px ;
+  }
+
+ .btn{
+  margin-left: 20px;
+  height: 30px;
+  width: 30px;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+ }
+ .btn1{
+  background: none;
+  border: none;
+ }
+
+.everyone{
+  height: 30px;
+  width: fit-content;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  /* justify-self: center; */
+  margin-left: 220px;
+}
+.everyone:hover{
+  background-color: rgba(128, 128, 128, 0.267);
+ }
+
+
+.btn2{
+  color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0px 0px 0px 4px;
+  background: none;
+  border: none;
+}
+
+.btn:hover{
+ background-color: rgba(128, 128, 128, 0.267);
+}
+
+
+
+
+  
+  .modalContainer .footer {
+    flex: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modalContainer .footer button {
+    width: 150px;
+    height: 45px;
+    margin: 10px;
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  #cancelBtn {
+    background-color: crimson;
+  }
+
+
+  .questi0n_post{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  
+  .add-question{
+    width: 50%;
+    text-align: center;
+  }
+  .add-question:hover{
+    background-color: rgba(235, 84, 84, 0.151);
+    border-bottom: 3px solid blue;
+
+  }
+  .create-post{
+    width: 50%;
+    text-align: center;
+  }
+  .create-post:hover{
+    border-bottom: 3px solid blue;
+    background-color: rgba(235, 84, 84, 0.151);
+  }
+
+
+
+
+  .user-img{
+    height: 45px;
+    width: 45px;
+    border-radius: 100px;
+    background-color: rgb(0,153,166);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .user{
+    font-size: 20px;
+    color: white;
+  }
+
+
+.btn_credentials{
+  background: none;
+  border-radius: 15px;
+  border: 1px solid rgba(219, 219, 219, 0.719);
+  padding: 8px 10px 8px 8px;
+  display: flex;
+  align-items: center;
+  height: 30px;
+}
+.right-btn{
+  margin-left: 10px;
+  background: none;
+  border: none;
+  outline: none;
+}
+  .credential{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
+  .credential2{
+    margin-left: 10px;
+  }
+  .credential2 p{
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+  }
+  .say{
+    width: 50vw;
+    height: 40vh;
+    outline: none;
+    border: 0px solid rgb(199, 196, 196);
+  }
+  .text-box{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .post{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .post-btn{
+    margin-right: 10px;
+  }
+  .post-btn button{
+    height: 30px;
+    width: 60px;
+    /* padding: 10px; */
+    background-color: rgb(0, 81, 255);
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    color: white;
+  }
+  .text-mod{
+    margin-left: 10px;
+  }
+  .Aa{
+    border: none;
+    background:none;
+    outline: none;
+    padding: 4px;
+
+  }
+  .Aa:hover{
+    border: 1px solid blue;
+  }

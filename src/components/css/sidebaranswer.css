@@ -1,0 +1,29 @@
+.questions{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin-left: 80px;
+}
+
+.qfy1{
+    width: max-content;
+    font-weight: bold;
+    /* padding-bottom: 10px; */
+}
+
+.qfy{
+    width: max-content;
+    font-size:  small;
+    background-color: rgba(185, 44, 39, 0.144);
+    padding: 7px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: rgb(185,43,39);
+}
+
+
+
+.qfy-box{
+    border-bottom: 0.5px solid rgb(190, 190, 190);
+    width: 150px;
+}

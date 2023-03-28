@@ -1,0 +1,122 @@
+body.active-modl{
+    overflow-y: hidden;
+  }
+  
+  .anss{
+    padding-left: 10px;
+  }
+  
+  .modalbackground {
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: fixed;
+      z-index: 3;
+      background-color: rgba(49, 49, 49, 0.8);
+    }
+    .overlay{
+      background:rgba(49, 49, 49, 0.8) ;
+    }
+    
+    .modalContainer {
+      width: min-content;
+      height: min-content;
+      border-radius: 12px;
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.877) 0px 5px 25px;
+      display: flex;
+      flex-direction: column;
+      /* justify-content: center; */
+      /* align-items: center; */
+      padding: -25px;
+      z-index: 1000;
+      position: fixed;
+      /* margin-left: 350px; */
+      margin-top: 10px;
+      top: 10%;
+      left: 30%;
+    }
+    
+    .modalcontainer .title {
+      display: inline-block;
+      text-align: center;
+      /* margin-top: 10px; */
+    }
+    
+    .titleCloseBtn {
+      display: flex;
+      justify-content: flex-end;
+    }
+    
+    .titleCloseBtn button {
+      background-color: transparent;
+      border: none;
+      font-size: 25px;
+      cursor: pointer;
+    }
+    
+    .modalContainer .body {
+      /* flex: 50%; */
+      /* display: flex;
+      justify-content: center;
+      align-items: center; */
+      font-size: 1.7rem;
+      /* text-align: center; */
+    }
+    
+    .closebtn{
+      display: flex;
+      /* justify-content: center; */
+      justify-self: start;
+     align-items: center;
+     padding: 4px;
+      margin-top: 10px;
+    }
+    .btn1{
+      display: flex;
+      align-items: center;
+    }
+    .btn-spn{
+      margin-left:10px ;
+    }
+  
+ .form{
+    padding: 5px;
+    margin-left: 10px;
+    padding-bottom: 20px;
+ }
+ .myinput{
+    height: 20px;
+    border: none;
+    width: 80vh;
+    /* border: 1px solid white; */
+    outline: none;
+    /* margin-bottom: 10px; */
+
+ }
+ .right:hover{
+    border: 0.5px solid rgba(0, 119, 255, 0.678);
+}
+
+.title{
+    font-weight: bold;
+    font-size: 12px;
+}
+.button button{
+    /* padding: 10px; */
+    height: 35px;
+    width: 80px;
+    border-radius: 20px;
+    background-color: rgba(0, 119, 255, 0.678);
+    border: none;
+    color: white;
+    margin-right: 50px;
+}
+.button{
+    margin-top: 80px;
+    display: flex;
+    justify-content: flex-end;
+}

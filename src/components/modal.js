@@ -22,7 +22,7 @@ function ModalBar({ closeModal }) {
 
   function submit(e) {
     e.preventDefault();
-    axios.post(('http://localhost:4000/api/posts'), {
+    axios.post(('http://localhost:3014/api/card-posts'), {
       textId: data.textId,
     })
       .then(res => {

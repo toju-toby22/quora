@@ -44,7 +44,7 @@ app.use("/signup", SignupRoutes);
 
 
 
- mongoose.connect("mongodb://localhost/quora database",
+ mongoose.connect("mongodb://localhost/quoradatabase",
     { useNewUrlParser: true, useUnifiedTopology: true, family: 4 }, 
     err => {
         if (err) throw err;
@@ -53,7 +53,7 @@ app.use("/signup", SignupRoutes);
     });
 mongoose.Promise = global.Promise;
 
-const port = 4000
+const port = 3014
 app.listen(port, () => {
     console.log( `Running ${port}`)
 })

@@ -19,8 +19,8 @@ const app = express() // 2) Initializing the express libary
 // const expressHandlebars = require('express-handlebars') // 3) Import the handel bars
 const bodyParser = require('body-parser');// 4) Import the body parser
 const path = require('path')
-const apiRoutes = require("./routes/Api-routes")
-const SignupRoutes = require("./routes/Signup")
+const postRoutes = require("./routes/post")
+const authRoutes = require("./routes/auth")
 const mongoose = require('mongoose')
 const cors = require('cors')
 
@@ -32,20 +32,20 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 app.use(express.json());
 //Allows any request from any api to access your device
-app.use(cors({ origin: '*'}))
+app.use(cors({ origin: '*' }))
 
 
 
 
-app.use("/api", apiRoutes);
-app.use("/signup", SignupRoutes);
+app.use("/api", postRoutes);
+app.use("/api", authRoutes);
 
 // app.use("/create-products", adminRoutes);
 
 
 
- mongoose.connect("mongodb://localhost/quoradatabase",
-    { useNewUrlParser: true, useUnifiedTopology: true, family: 4 }, 
+mongoose.connect("mongodb://localhost/quoradatabase",
+    { useNewUrlParser: true, useUnifiedTopology: true, family: 4 },
     err => {
         if (err) throw err;
         console.log("Quora data base connected")
@@ -55,5 +55,5 @@ mongoose.Promise = global.Promise;
 
 const port = 3014
 app.listen(port, () => {
-    console.log( `Running ${port}`)
+    console.log(`Running ${port}`)
 })

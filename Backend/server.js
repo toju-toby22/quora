@@ -44,16 +44,16 @@ app.use("/signup", SignupRoutes);
 
 
 
- mongoose.connect("mongodb://localhost/quoradb",
+ mongoose.connect("mongodb://localhost/quora database",
     { useNewUrlParser: true, useUnifiedTopology: true, family: 4 }, 
     err => {
         if (err) throw err;
-        console.log("Quora db connected")
+        console.log("Quora data base connected")
         // finds a database called website_db, if it does not exist. it will create the datatbase it self
     });
 mongoose.Promise = global.Promise;
 
-const port = 3013
+const port = 4000
 app.listen(port, () => {
     console.log( `Running ${port}`)
 })

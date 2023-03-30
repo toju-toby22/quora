@@ -22,7 +22,7 @@ function ModalBar({ closeModal }) {
 
   function submit(e) {
     e.preventDefault();
-    axios.post(('http://localhost:3013/api/card-posts'), {
+    axios.post(('http://localhost:4000/api/posts'), {
       textId: data.textId,
     })
       .then(res => {
@@ -95,7 +95,7 @@ function ModalBar({ closeModal }) {
 
                     <div className='post'>
                       <div className='text-mod'>
-                        {/* <input type='file' className='Aa'/> */}
+                        {/* <input  type='file' className='Aa'/> */}
                         
                         <div></div>
                       </div>

@@ -50,7 +50,7 @@ const handleDecrement = () =>{
 
   useEffect(() => {
     const getdata = () => {
-      axios.get(`http://localhost:3013/api/posts`).then((res) => {
+      axios.get(`http://localhost:4000/api/posts`).then((res) => {
         console.log(res.data);
         setaData(res.data);
       }).catch((err) => {

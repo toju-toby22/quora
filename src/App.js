@@ -1,31 +1,38 @@
-import { Routes, Route } from 'react-router-dom'
+import {  Navigate, Routes, Route } from "react-router-dom";
 import React from 'react';
-// import ReactDOM from 'react-dom';
 import Quora from "./pages/Quora"
+import Auth from "./pages/Auth"
 import Answer from "./pages/Answer"
-import SignUp from "./pages/SignUp"
-import QuoraBox from "./components/QuoraBox"
-// import Courses from "./Pages/courses"
-// import About from "./Pages/about"
-// import Contact from "./Pages/contact"
-// import Module1 from "./Pages/module1"
-// import Module2 from "./Pages/module2"
-import { ToastContainer } from 'react-toastify';
+import ProfilePage from "./pages/profile/ProfilePage";
+// import Login from "./pages/Login"
+// import { useMemo } from "react";
+import { useSelector } from "react-redux";
+
+
 
 import './App.css'
+
+
+
+
 function App() {
-  //path means Url for the browser to display your component as a page
+  const user = useSelector((state) => state.authReducer.authData);
+
+ 
   return (
     <div>
-      <ToastContainer theme='colored' position='top-center'></ToastContainer>
-
-      <Routes>
-        <Route element={<Quora />} path="/" />
-        <Route element={<Answer />} path="Answer" />
-        <Route element={<QuoraBox />} path="QuoraBox" />
-        <Route element={<SignUp />} path="SignUp" />
-      </Routes>
-
+      
+          <Routes>
+            {/* <Route element={<Login />} path="/" /> */}
+            <Route path="/" element={user ? <Navigate to = '/Quora'/> : <Navigate to = '/Auth'/>} />
+            <Route path="/Quora" element={user ? <Quora/> : <Navigate to = '/Auth'/>} />
+            <Route path="/Auth"  element={ <Auth />} />
+            <Route path="Answer" element={<Answer />} />
+            <Route
+          path="/ProfilePage/:id"
+          element={user ? <ProfilePage /> : <Navigate to="../auth" />}
+        />
+          </Routes>
     </div>
   );
 }

@@ -1,59 +1,87 @@
-//Create server With Express framework
-// Get request to view that the express is working
-
-// the / means the home page when you run the resqust with port 4000
-
-//TEMPLATE ENGINE-: Is an engine that can be configures with node and express to help display or render HTML files
-// TYEPS:
-//1) Handlebars
-//2) Ejs
-//3) Pug
-
-//Install Express Handlebars- Configures the express to view  html pages
-//Install Handlebars -- Helps view html pages
-//Install Body-parser - Helps export files in Json format
+import express from "express";
+import bodyParser from "body-parser";
+import cors from "cors";
+import dotenv from "dotenv";
+import mongoose from "mongoose";
 
 
-const express = require('express') //  1) Importing Express Libary
-const app = express() // 2) Initializing the express libary
-// const expressHandlebars = require('express-handlebars') // 3) Import the handel bars
-const bodyParser = require('body-parser');// 4) Import the body parser
-const path = require('path')
-const postRoutes = require("./routes/post")
-const authRoutes = require("./routes/auth")
-const mongoose = require('mongoose')
-const cors = require('cors')
+// routes
+import AuthRoute from './routes/auth.js'
+import UserRoute from './routes/users.js'
+import PostRoute from './routes/posts.js'
+import UploadRoute from './routes/UploadRoute.js'
+// import ChatRoute from './routes/ChatRoute.js'
+// import MessageRoute from './routes/MessageRoute.js'
+
+const app = express();
 
 
-//Exress configuration
-//------------------------------------
-app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(bodyParser.json());
-app.use(express.json());
-//Allows any request from any api to access your device
-app.use(cors({ origin: '*' }))
+// middleware
+app.use(bodyParser.json({ limit: "30mb", extended: true }));
+app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
+app.use(cors());
 
 
 
 
-app.use("/api", postRoutes);
-app.use("/api", authRoutes);
 
-// app.use("/create-products", adminRoutes);
+// to serve images inside public folder
+app.use(express.static('public')); 
+app.use('/images', express.static('images'));
+
+
+dotenv.config();
+
+
+//local server config
+// mongoose.connect("mongodb://localhost/quoraservr_db",
+//     { useNewUrlParser: true, useUnifiedTopology: true, family: 4 },
+//     err => {
+//         if (err) throw err;
+//         console.log("db connected")
+//         // finds a database called website_db, if it does not exist. it will create the datatbase it self
+//     });
+// mongoose.Promise = global.Promise;
+
+// const port = 3024
+// app.listen(port, () => {
+//     console.log(`Running ${port}`) 
+// })
 
 
 
-mongoose.connect("mongodb://localhost/quoradatabase",
-    { useNewUrlParser: true, useUnifiedTopology: true, family: 4 },
-    err => {
-        if (err) throw err;
-        console.log("Quora data base connected")
-        // finds a database called website_db, if it does not exist. it will create the datatbase it self
-    });
-mongoose.Promise = global.Promise;
+//routes
+app.use('/auth', AuthRoute);
+app.use('/user', UserRoute)
+app.use('/posts', PostRoute)
+app.use('/upload', UploadRoute)
+// app.use('/chat', ChatRoute)
+// app.use('/message', MessageRoute)
 
-const port = 3014
-app.listen(port, () => {
-    console.log(`Running ${port}`)
-})
+
+
+const PORT = process.env.PORT || 6001;
+mongoose
+  .connect(process.env.MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
+
+    /* ADD DATA ONE TIME */
+    // User.insertMany(users);
+    // Post.insertMany(posts);
+  })
+  .catch((error) => console.log(`${error} did not connect`));
+
+
+// const PORT = process.env.PORT;
+
+// const CONNECTION =process.env.MONGODB_URL;
+// mongoose
+//   .connect(CONNECTION, { 
+//     useNewUrlParser: true,
+//      useUnifiedTopology: true 
+//     }) .then(() => {app.listen(PORT, () => console.log(`Listening at Port ${PORT}`))})
+//   .catch((error) => console.log(`${error} did not connect`));

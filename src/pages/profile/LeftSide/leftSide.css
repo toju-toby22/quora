@@ -1,0 +1,120 @@
+
+.profile__image__name{
+    display: inline-flex;
+    /* align-items: center; */
+    /* margin: 0px 20px 0px 20px; */
+}
+
+.profile__name_details{
+    margin-left: 20px;
+}
+
+
+.name{
+    padding-top: 25px;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.info{
+    font-weight: 400;
+    font-size: 20px;
+    padding-bottom: 25px;
+}
+
+.followers_length{
+    font-size: 13px;
+    padding-top: 20px;
+}
+
+
+
+
+.profile__name_details{
+    width: fit-content;
+}
+
+.profile__img img{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    justify-self: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+
+
+.buttons_follow_notify_ask{
+    margin-top: 15px;
+}
+
+.buttons_follow_notify_ask button{
+    outline: none;
+    font-size: 14px;
+    font-weight: 290;
+    border-radius: 20px;
+    padding: 5px 20px 5px 20px;
+    margin: 0px 2px 0px 2px;
+    border: 0.5px solid rgb(189, 189, 189);
+}
+
+.buttons_follow_notify_ask button:hover {
+    background-color: gainsboro;
+}
+
+.info_text{
+    font-weight: 200;
+}
+
+.section__list{
+    margin-right: 20px;
+}
+.list{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    justify-content: space-betaween;
+    margin-bottom: 10px;
+    /* border-bottom: 1px solid black; */
+
+}
+.list li{
+    font-size: 12px;
+    font-weight: 620;
+    width: max-content;
+    padding: 15px 10px 10px 15px;
+    /* margin: 0px 20px 0px 0px; */
+    color: rgb(119, 119, 119);
+}
+
+.list li:hover{
+    background: rgb(226, 226, 226);
+    border-bottom: 3px solid rgb(117, 31, 31);
+    transition: ease-in-out;
+}
+
+.profile__most-recent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgb(170, 170, 170);
+    border-bottom: 1px solid rgb(170, 170, 170);
+    margin-bottom: 20px;
+}
+.profile__most-recent button{
+    outline: none;
+    border: none;
+    padding: 5px 15px 5px 15px;
+    height: 30px;
+    border-radius: 20px;
+}
+
+.profile{
+    font-weight: 500;
+}
+.profile__most-recent button:hover{
+    background-color: gainsboro;
+}

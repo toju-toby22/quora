@@ -228,22 +228,34 @@ body.active-modl{
     font-size: small;
   }
   .say{
-    width: 50vw;
-    height: 40vh;
+    width: 35vw;
+    height: 35vh;
     outline: none;
     border: 0px solid rgb(199, 196, 196);
   }
   .text-box{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding: 20px;
+    padding-left: 20px;
+  }
+  .img2{
+    height: 200px;
+    width: 100%;
+    /* position: relative; */
+    object-fit: cover;
+    
+  }
+  .box{
+    /* margin-top: 50px; */
+    z-index: 500;
   }
 
   .post{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 40px;
     margin-bottom: 10px;
   }
   .post-btn{
@@ -271,4 +283,5 @@ body.active-modl{
   }
   .Aa:hover{
     border: 1px solid blue;
+    /* transition: 10s; */
   }

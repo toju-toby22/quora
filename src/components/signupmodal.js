@@ -60,7 +60,7 @@ function SignupBar({ closeModal }) {
         let regobj = { name, password, email,};
         if (IsValidate()) {
         console.log(regobj);
-        fetch("http://localhost:3013/signup/createusers", {
+        fetch("http://localhost:3014/api/createusers", {
             method: "POST",
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(regobj)

@@ -2,13 +2,15 @@
   width: "100%";
   min-width: fit-content;
 }
-
+body{
+  background: rgba(220, 220, 220, 0.404);
+}
 .quora__contents {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0px;
-  background-color: rgba(0, 0, 0, 0.05);
+  /* background-color: rgba(0, 0, 0, 0.05); */
   min-width: fit-content;
   width: 100%;
 }

@@ -14,14 +14,14 @@ import Quora from "../Assets/quora.png";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import LanguageIcon from '@mui/icons-material/Language';
 // import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link,Navigate } from 'react-router-dom';
 import PeopleOutlineIcon from '@mui/icons-material/PeopleOutline';
 // import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import ModalBar from "../components/modal";
 import { BsPencilSquare } from 'react-icons/bs';
 import { FaRegListAlt } from 'react-icons/fa';
 
-
+import { useSelector } from "react-redux";
 import { useState } from "react"
 
 
@@ -37,6 +37,11 @@ function QuoraHeader() {
   } else {
     document.body.classList.remove('active-modl')
   }
+
+
+  const serverPublic = process.env.REACT_APP_PUBLIC_FOLDER;
+
+    const { user } = useSelector((state) => state.authReducer.authData);
 
 
   return (
@@ -93,9 +98,17 @@ function QuoraHeader() {
             Try Quora+
           </button>
 
-          <Link to="SignUp">
+          <Link to="/Auth">
             <div className="qHeader__icon">
               <LanguageIcon />
+            </div>
+          </Link>
+
+          <Link to={`/ProfilePage/${user._id}`} >
+            <div className="qHeader__icon">
+             <img className='profileimg' src={  user.profilePicture
+              ? serverPublic + user.profilePicture
+              : serverPublic + "defaultProfile.png"} alt="" />
             </div>
           </Link>
 
